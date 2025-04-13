@@ -1,0 +1,150 @@
+.agenda-view {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.agenda-day {
+  margin-bottom: 24px;
+}
+
+.agenda-date-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.agenda-events {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.agenda-event {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agenda-event:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-event-time {
+  min-width: 140px;
+  color: #666;
+  font-size: 0.9rem;
+  padding-right: 16px;
+  border-right: 1px solid #eee;
+}
+
+.agenda-event-content {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.agenda-event-title {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.agenda-event-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.agenda-event-location {
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.agenda-event-goal {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: white;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-left: 16px;
+}
+
+.agenda-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  text-align: center;
+  padding: 40px;
+}
+
+.agenda-empty p:first-child {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.agenda-empty p:last-child {
+  font-size: 0.9rem;
+}
+
+/* Scrollbar styles */
+.agenda-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.agenda-view::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.agenda-view::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.agenda-view::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .agenda-view {
+    padding: 16px;
+  }
+
+  .agenda-event {
+    flex-direction: column;
+  }
+
+  .agenda-event-time {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 8px 0;
+    margin-bottom: 8px;
+  }
+
+  .agenda-event-content {
+    padding: 8px 0;
+  }
+
+  .agenda-event-goal {
+    margin: 8px 0 0 0;
+    align-self: flex-start;
+  }
+} 
